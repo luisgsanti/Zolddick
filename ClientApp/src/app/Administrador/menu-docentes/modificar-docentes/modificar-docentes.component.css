@@ -1,0 +1,10 @@
+.Titulo {
+    text-align: center;
+    color: blue
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(https://cn.opendesktop.org/img//hive/content-pre1/87818-1.png) no-repeat center top;
+    background-size: cover;
+  }

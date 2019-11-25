@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+  
+    <div class="Titulo">
+      <h1>Consultar Docentes</h1><br>
+    </div>
+  
+    <br>
+  
+    <div class="table-container">
+      <table class="table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Identificacion</th>
+            <th scope="col">Primer Nombre</th>
+            <th scope="col">Primer Apellido</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Par Asignado</th>
+            <th scope="col">Jefe Asignado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let docente of docentes">
+            <td>{{docente.id}}</td>
+            <td>{{docente.identificacion}}</td>
+            <td>{{docente.primerNombre}}</td>
+            <td>{{docente.primerApellido}}</td>
+            <td>{{docente.correo}}</td>
+            <td>{{docente.estado}}</td>
+            <td>{{docente.cargo}}</td>
+            <td><button (click)="cambiarEstado(pregunta)" class=" btn btn-primary">Asignar</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <br><br>
+  </div>
+
+  
+<app-barra-de-navegacion></app-barra-de-navegacion>

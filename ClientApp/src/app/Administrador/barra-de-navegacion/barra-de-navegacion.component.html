@@ -1,0 +1,131 @@
+<div class="page-wrapper chiller-theme toggled">
+  <a id="show-sidebar" class="btn btn-sm btn-dark">
+    <i class="fas fa-bars"></i>
+  </a>
+  <nav id="sidebar" class="sidebar-wrapper">
+    <div class="sidebar-content">
+      <div style="cursor: default" class="sidebar-brand">
+        <a> ZOLDDICK </a>
+        <div id="close-sidebar">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <div class="sidebar-header">
+        <div class="user-pic">
+          <img class="img-responsive img-rounded"
+            src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+            alt="User picture">
+        </div>
+        <div style="cursor: default" class="user-info">
+          <span class="user-name"><strong>Administrador</strong>
+          </span>
+          <span class="user-role">Administrador</span>
+          <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span> Online</span>
+          </span>
+        </div>
+      </div>
+      <!-- sidebar-search  -->
+      <div class="sidebar-menu">
+        <ul>
+          <li class="header-menu">
+            <span>General</span>
+          </li>
+          <li class="sidebar-dropdown">
+            <a style="cursor: pointer">
+              <i class="fas fa-users"></i>
+              <span> Gestionar Docente</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLink="/Adminitrador/MenuDeGestion/NuevoDocente">Agregar Docentes</a>
+                </li>
+                <li>
+                  <a routerLink="/Adminitrador/MenuDeGestion/ConsultarDocentes">Consultar Docentes</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a style="cursor: pointer">
+              <i class="fas fa-file-alt"></i>
+              <span> Detalles Evaluacion</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a>Abrir Periodo de Evaluacion
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="/Adminitrador/MenuEvaluador/AsignarEvaluador">Asignar Calificadores</a>
+                </li>
+                <li>
+                  <a>Estado Actual de los Evaluados</a>
+                </li>
+                <li>
+                  <a>Todos los Detalles</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown">
+            <a style="cursor: pointer">
+              <i class="far fa-edit"></i>
+              <span> Gestinar Formulario</span>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a routerLink="/Adminitrador/MenuDeFormularios/FormularioActual">Formulario Actual</a>
+                </li>
+                <li>
+                  <a routerLink="/Adminitrador/MenuDeFormularios/AgregarPregunta">Agregar Preguntas</a>
+                </li>
+                <li>
+                  <a routerLink="/Adminitrador/MenuDeFormularios/ConsultarPreguntas">Consultar Preguntas</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a routerLink="/Adminitrador/principal" style="cursor: pointer">
+              <i class="fas fa-home"></i>
+              <span> Volver a Inicio</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- sidebar-menu  -->
+    </div>
+    <!-- sidebar-content  -->
+    <div class="sidebar-footer">
+      <a>
+        <i class="fa fa-bell"></i>
+        <span class="badge badge-pill badge-warning notification">0</span>
+      </a>
+      <a>
+        <i class="fa fa-envelope"></i>
+        <span class="badge badge-pill badge-success notification">0</span>
+      </a>
+      <a>
+        <i class="fa fa-cog"></i>
+        <span class="badge-sonar"></span>
+      </a>
+      <a routerLink="/Inicio">
+        <i class="fa fa-power-off"></i>
+      </a>
+    </div>
+  </nav>
+  <!-- sidebar-wrapper  -->
+  <main class="page-content">
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <!-- page-content" -->
+
+</div>
+<!-- page-wrapper -->
