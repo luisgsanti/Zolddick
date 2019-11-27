@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { AuthService } from '../../services/auth.service';
 
 declare var JQuery:any;
 declare var $:any;
@@ -16,11 +17,40 @@ declare var $:any;
     ])
   ]
 })
+
 export class BarraDeNavegacionComponent implements OnInit {
+ 
+  isExpanded = false;
 
-  constructor() { }
+  collapse() {
+    this.isExpanded = false;
+  }
 
-  ngOnInit() {
+  toggle() {
+    this.isExpanded = !this.isExpanded;
+  }
+
+  constructor(private authorizeService: AuthService) { }
+
+  userName(): string {
+    return this.authorizeService.getUserName();
+  }
+
+  public isAuthenticated(): boolean
+  {
+    return this.authorizeService.isAuthenticated();
+  }
+
+  isAuthenticatedRole(role: string): boolean {
+      
+      if (this.isAuthenticated && role != null ) {
+        return this.authorizeService.hasRole(role);
+      }
+  }
+
+
+  public activar(){
+    
     $(".sidebar-dropdown > a").click(function() {
       $(".sidebar-submenu").slideUp(200);
       if (
@@ -49,7 +79,11 @@ export class BarraDeNavegacionComponent implements OnInit {
     $("#show-sidebar").click(function() {
       $(".page-wrapper").addClass("toggled");
     });
-    
+   
+  }
+
+  ngOnInit() { 
+    this.activar();
   }
 
 }

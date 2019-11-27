@@ -17,6 +17,10 @@
         <!-- PASSWORD INPUT -->
         <label for="password">Contraseña</label>
         <input type="password" placeholder="Ingrese su Contraseña">
+
+        <button class=" btn btn-primary" (click)="login()"> Login</button>
+        <button class=" btn btn-primary" (click)="logout()"> Logout</button>
+
         <input routerLinkActive = '["link-active"]' routerLink="/Adminitrador/principal" type="submit" value="Ingresar">
       </form>
     </div>

@@ -5,7 +5,7 @@
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div style="cursor: default" class="sidebar-brand">
-        <a> ZOLDDICK </a>
+        <a class="zolddick"> ZOLDDICK </a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -13,32 +13,35 @@
       <div class="sidebar-header">
         <div class="user-pic">
           <img class="img-responsive img-rounded"
-            src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-            alt="User picture">
+          src="https://yt3.ggpht.com/a/AGF-l79A9cjzQenkHUWo-myeHheaAkm8XZDBL2-HfA=s288-c-k-c0xffffffff-no-rj-mo" class="avatar" alt="Avatar Image">
         </div>
         <div style="cursor: default" class="user-info">
-          <span class="user-name"><strong>Administrador</strong>
-          </span>
-          <span class="user-role">Administrador</span>
-          <span class="user-status">
-            <i class="fa fa-circle"></i>
-            <span> Online</span>
-          </span>
+         
+          <div class="login-box">
+          <form>
+            <!-- USERNAME INPUT -->
+            <label for="username">Usuario</label>
+            <input type="text" placeholder="Ingrese su Usuario">
+            <!-- PASSWORD INPUT -->
+            <label for="password">Contraseña</label>
+            <input type="password" placeholder="Ingrese su Contraseña">       
+          
+            <input routerLinkActive = '["link-active"]' routerLink="/Adminitrador/principal" type="submit" value="Login">
+          </form>
+        </div>        
         </div>
       </div>
       <!-- sidebar-search  -->
       <div class="sidebar-menu">
         <ul>
-          <li class="header-menu">
-            <span>General</span>
-          </li>
+          <br>
           <li class="sidebar-dropdown">
             <a style="cursor: pointer">
               <i class="fas fa-users"></i>
               <span> Gestionar Docente</span>
             </a>
             <div class="sidebar-submenu">
-              <ul>
+              <ul >
                 <li>
                   <a routerLink="/Adminitrador/MenuDeGestion/NuevoDocente">Agregar Docentes</a>
                 </li>
